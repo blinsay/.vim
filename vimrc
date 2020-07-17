@@ -97,10 +97,15 @@ noremap <leader>w <C-w>v<C-w>l
 " ALE and language plugins
 
 " ALE
+set omnifunc=ale#completion#OmniFunc
 let g:ale_linters = {
 \   'go': ['go build', 'gofmt', 'govet'],
 \   'python': ['flake8'],
+\   'rust': ['analyzer'],
 \}
+let g:ale_fixers = {
+\   'rust': ['rustfmt'],
+\ }
 let g:ale_pattern_options = {
 \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
 \ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
@@ -116,9 +121,7 @@ au FileType go nmap <leader>vd <Plug>(go-def-vertical)
 au FileType go nmap <leader>j <Plug>(go-doc)
 
 " Rust
-let g:racer_experimental_completer = 1
-au FileType rust nmap <leader>d <Plug>(rust-def)
-au FileType rust nmap <leader>j <Plug>(rust-doc)
+au FileType rust nmap <leader>d <Plug>(ale_go_to_definition)
 
 " Typescript
 let g:tsuquyomi_disable_default_mappings = 1
