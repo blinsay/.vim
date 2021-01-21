@@ -101,7 +101,12 @@ set omnifunc=ale#completion#OmniFunc
 let g:ale_linters = {
 \   'go': ['go build', 'gofmt', 'govet'],
 \   'python': ['flake8'],
-\   'rust': ['analyzer'],
+\   'rust': ['cargo', 'analyzer'],
+\}
+let g:ale_rust_analyzer_config = {
+\ 'diagnostics': { 'disabled': ['unresolved-import'] },
+\ 'procMacro': { 'enable': v:true },
+\ 'checkOnSave': { 'command': 'clippy', 'enable': v:true }
 \}
 let g:ale_fixers = {
 \   'rust': ['rustfmt'],
@@ -112,6 +117,8 @@ let g:ale_pattern_options = {
 \}
 nmap <leader><F2> <Plug>(ale_next_wrap)
 nmap <leader><F3> <Plug>(ale_detail)
+
+nmap <leader>d <C-]>
 
 " Go
 let g:go_fmt_command = "goimports"
