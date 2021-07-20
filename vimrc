@@ -108,8 +108,13 @@ let g:ale_rust_analyzer_config = {
 \ 'procMacro': { 'enable': v:true },
 \ 'checkOnSave': { 'command': 'clippy', 'enable': v:true }
 \}
+let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'rust': ['rustfmt'],
+\   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
+\   'css': ['prettier'],
 \ }
 let g:ale_pattern_options = {
 \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
