@@ -133,10 +133,20 @@
   path = bundle/rust.vim
   url = https://github.com/rust-lang/rust.vim.git
 
+; Terraform
+
 [submodule "bundle/vim-terraform"]
   path = bundle/vim-terraform
   url = https://github.com/hashivim/vim-terraform.git
 
+; Python
+
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+
+; Julia
+
+[submodule "bundle/julia-vim"]
+	path = bundle/julia-vim
+	url = https://github.com/JuliaEditorSupport/julia-vim.git
