@@ -104,13 +104,6 @@
   path = bundle/typescript-vim
   url = https://github.com/leafgarland/typescript-vim.git
 
-[submodule "bundle/tsuquyomi"]
-  path = bundle/tsuquyomi
-  url = https://github.com/Quramy/tsuquyomi.git
-  ignore = untracked
-
-; Markdown
-
 [submodule "bundle/vim-markdown"]
   path = bundle/vim-markdown
   url = https://github.com/tpope/vim-markdown.git
