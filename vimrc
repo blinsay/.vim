@@ -101,7 +101,7 @@ set omnifunc=ale#completion#OmniFunc
 let g:ale_linters = {
 \   'go': ['go build', 'gofmt', 'govet'],
 \   'python': ['flake8'],
-\   'rust': ['cargo', 'analyzer'],
+\   'rust': ['analyzer'],
 \}
 let g:ale_rust_analyzer_config = {
 \ 'diagnostics': { 'disabled': ['unresolved-import'] },
@@ -124,6 +124,8 @@ nmap <leader><F2> <Plug>(ale_next_wrap)
 nmap <leader><F3> <Plug>(ale_detail)
 
 nmap <leader>d <C-]>
+nmap gd <Plug>(ale_go_to_definition)
+nmap gh <Plug>(ale_hover)
 
 " Go
 let g:go_fmt_command = "goimports"
@@ -131,11 +133,3 @@ au FileType go nmap <leader>d <Plug>(go-def)
 au FileType go nmap <leader>sd <Plug>(go-def-split)
 au FileType go nmap <leader>vd <Plug>(go-def-vertical)
 au FileType go nmap <leader>j <Plug>(go-doc)
-
-" Rust
-au FileType rust nmap <leader>d <Plug>(ale_go_to_definition)
-
-" Typescript
-let g:tsuquyomi_disable_default_mappings = 1
-let g:tsuquyomi_completion_detail = 1
-au FileType typescript nmap <leader>d <Plug>(TsuquyomiDefinition)
