@@ -10,8 +10,12 @@ set nocompatible
 set modelines=0
 
 " Colors/Visibility
-set background=dark
-colorscheme solarized
+"
+" NOTE: vim-solarized has been kinda jank, ditch it because the defaults look
+" fine in ghostty and friends.
+"
+" set background=dark
+" colorscheme solarized-dark
 set scrolloff=10
 
 " UI

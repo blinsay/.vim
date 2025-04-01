@@ -58,47 +58,17 @@
 
 ; clojure
 
-[submodule "bundle/paredit.vim"]
-  path = bundle/paredit.vim
-  url = https://github.com/vim-scripts/paredit.vim.git
-  ignore = untracked
-
-[submodule "bundle/vim-clojure-static"]
-  path = bundle/vim-clojure-static
-  url = https://github.com/guns/vim-clojure-static.git
-  ignore = untracked
-
-[submodule "bundle/rainbow_parentheses.vim"]
-  path = bundle/rainbow_parentheses.vim
-  url = https://github.com/kien/rainbow_parentheses.vim.git
-
 [submodule "bundle/Dockerfile.vim"]
   path = bundle/Dockerfile.vim
   url = https://github.com/ekalinin/Dockerfile.vim.git
 
 ; Elm
 
-[submodule "bundle/elm-vim"]
-  path = bundle/elm-vim
-  url = https://github.com/ElmCast/elm-vim.git
-
-; GraphQL
-
-[submodule "bundle/vim-graphql"]
-  path = bundle/vim-graphql
-  url = https://github.com/jparise/vim-graphql.git
-
-; Go
-
 [submodule "bundle/vim-go"]
   path = bundle/vim-go
   url = https://github.com/fatih/vim-go.git
 
 ; JS and Typescript
-
-[submodule "bundle/vim-javascript"]
-  path = bundle/vim-javascript
-  url = https://github.com/pangloss/vim-javascript.git
 
 [submodule "bundle/typescript-vim"]
   path = bundle/typescript-vim
@@ -122,12 +92,3 @@
 
 ; Terraform
 
-[submodule "bundle/vim-terraform"]
-  path = bundle/vim-terraform
-  url = https://github.com/hashivim/vim-terraform.git
-
-; Python
-
-[submodule "bundle/julia-vim"]
-	path = bundle/julia-vim
-	url = https://github.com/JuliaEditorSupport/julia-vim.git
